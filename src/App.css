@@ -4,22 +4,44 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: rgba(20, 118, 184, 0.651);
+  height: 160px;
   padding: 20px;
-  color: white;
+  color: black;
+  margin-bottom: 100px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  margin-top: 40px;
+  font-size: 3.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.Button-Style {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.Form-Style {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  padding-left: 160px;
+}
+
+.Grid-Style {
+  display: flex;
+  justify-content: center;
+  padding-left: 70px;
 }
 
 @keyframes App-logo-spin {
