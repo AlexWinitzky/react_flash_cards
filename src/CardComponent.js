@@ -26,17 +26,17 @@ class CardComponent extends React.Component {
     const { card, deleteCard } = this.props
     return (
       <div>
-        <Card style={styles.cardStyle} onClick={this.toggleCard} >   
-        <Card.Content extra>
-        <div style={styles.textStyle}>
-          {this.state.showFront ? card.front : card.back }
-        </div>
-        </Card.Content>
-        <Card.Description extra>
-        <div>
-        <Button icon='trash' basic color='red' onClick={() => deleteCard(card.id)}></Button>
-        </div>
-        </Card.Description>
+        <Card style={styles.cardStyle} onClick={this.toggleCard} >
+          <Card.Content extra>
+            <div style={styles.textStyle}>
+              {this.state.showFront ? card.front : card.back}
+            </div>
+          </Card.Content>
+          <Card.Description extra>
+            <div>
+              <Button icon='trash' basic color='red' onClick={() => deleteCard(card.id)}></Button>
+            </div>
+          </Card.Description>
         </Card>
       </div>
     )

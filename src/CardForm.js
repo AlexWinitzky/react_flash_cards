@@ -3,12 +3,12 @@ import { Form } from 'semantic-ui-react'
 
 
 class CardForm extends React.Component {
-  state = {front: '', back: ''}
+  state = { front: '', back: '' }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addCard(this.state)
-    this.setState({front: '', back: ''})
+    this.setState({ front: '', back: '' })
     this.props.showForm()
   }
 
@@ -26,15 +26,15 @@ class CardForm extends React.Component {
             name='front'
             value={this.state.front}
             onChange={this.handleChange}
-            />
+          />
           <Form.Input
             required
             placeholder="Add An Answer"
             name='back'
             value={this.state.back}
             onChange={this.handleChange}
-            />
-            <Form.Button icon='plus' basic color='green'></Form.Button>
+          />
+          <Form.Button icon='plus' basic color='green'></Form.Button>
         </Form.Group>
       </Form>
     )

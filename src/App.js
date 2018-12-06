@@ -46,19 +46,17 @@ class App extends Component {
   render() {
     const { cards, showForm } = this.state
     return (
-      // <Container>
-
       <div className="App">
         <header className="App-header">
           <img src={'nicolas-cage.jpg'} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactJS Flash Cards</h1>
         </header>
         <div className="App-intro">
-        <div className="Button-Style">
-          <Button basic color='blue' onClick={this.toggleForm}>
-            Add a New Card
+          <div className="Button-Style">
+            <Button basic color='blue' onClick={this.toggleForm}>
+              Add a New Card
           </Button>
-        </div>
+          </div>
           <Container className='Form-Style'>
             {showForm ? <CardForm showForm={this.toggleForm} addCard={this.addCard} /> : null}
           </Container>
@@ -70,15 +68,14 @@ class App extends Component {
                   {cards.map(item => {
                     return (
                       <CardComponent key={item.id} card={item} deleteCard={this.deleteCard} />
-                      )
-                    })}
+                    )
+                  })}
                 </Card.Group>
               </Grid.Row>
             </Grid>
           </Container>
         </div>
       </div>
-                    // </Container>
     );
   }
 }
