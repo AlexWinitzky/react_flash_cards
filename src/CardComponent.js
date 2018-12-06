@@ -7,16 +7,40 @@ const styles = {
     margin: '5px',
     height: '200px',
     width: '250px',
-    backgroundColor: 'beige'
+    backgroundColor: '#D5D8DC',
+    boxShadow: '5px 10px',
+    border: '1px solid black'
   },
-  textStyle: {
+  frontTextStyle: {
     margin: '60px',
-    color: 'blue'
+    color: '#4A235A'
   },
+  backTextStyle: {
+    margin: '60px',
+    color: '#145A32'
+  }
 }
+
 
 class CardComponent extends React.Component {
   state = { showFront: true };
+
+  cardTextStyle = () => {
+    const { card } = this.props
+    if (this.state.showFront === true) {
+      return (
+        <div style={styles.frontTextStyle}>
+          {card.front}
+        </div>
+      )
+    } else {
+      return (
+        <div style={styles.backTextStyle}>
+          {card.back}
+        </div>
+      )
+    }
+  }
 
   toggleCard = () => {
     this.setState({ showFront: !this.state.showFront });
@@ -28,12 +52,12 @@ class CardComponent extends React.Component {
       <div>
         <Card style={styles.cardStyle} onClick={this.toggleCard} >
           <Card.Content extra>
-            <div style={styles.textStyle}>
-              {this.state.showFront ? card.front : card.back}
+            <div>
+              {this.cardTextStyle()}
             </div>
           </Card.Content>
           <Card.Description extra>
-            <div>
+            <div className='Card-Button-Style'>
               <Button icon='trash' basic color='red' onClick={() => deleteCard(card.id)}></Button>
             </div>
           </Card.Description>
