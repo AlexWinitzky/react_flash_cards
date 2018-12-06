@@ -13,12 +13,6 @@ const styles = {
     margin: '60px',
     color: 'blue'
   },
-  buttonStyle: {
-    // height: '10px',
-    // width: '10px',
-    // marginLeft: '8px',
-    // marginTop: '-20px'
-  }
 }
 
 class CardComponent extends React.Component {
@@ -39,7 +33,7 @@ class CardComponent extends React.Component {
         </div>
         </Card.Content>
         <Card.Description extra>
-        <div style={styles.buttonStyle}>
+        <div>
         <Button icon='trash' basic color='red' onClick={() => deleteCard(card.id)}></Button>
         </div>
         </Card.Description>
